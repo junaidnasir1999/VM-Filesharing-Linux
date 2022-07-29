@@ -1,0 +1,16 @@
+Step1: Create two folders on your drive for e.g sharedfolder1 now make other folder test1
+Step2: Install VMware tools on your vm
+step3: To acesss folder we have to follow such commands on linux
+
+vmware-hgfsclient
+cd /mnt/
+ls
+You can't see any directory
+
+Now, you have to do one more step
+sudo mkdir/mnt/hgfs
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other 
+
+After it's installed you can visible folder hgfs
+cd hgfs/
+Now you can finally  acesss your sharedfolder 1 
